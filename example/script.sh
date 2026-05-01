@@ -1,1 +1,0 @@
-echo "this is an example" > ~/example.txt
