@@ -6,6 +6,7 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
   rcfile="$HOME/.zshrc"
 fi
 
+touch "$rcfile"
 sed -i '' '1i\
 export NVM_DIR="$HOME/.nvm"' "$rcfile"
 sed -i '' '2i\
