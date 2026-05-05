@@ -1,5 +1,3 @@
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.4/install.sh | bash
-
 rcfile="$HOME/.bashrc"
 
 if [[ "$OSTYPE" == "darwin"* ]]; then
@@ -7,12 +5,8 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
 fi
 
 touch "$rcfile"
-sed -i '' '1i\
-export NVM_DIR="$HOME/.nvm"' "$rcfile"
-sed -i '' '2i\
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"' "$rcfile"
-sed -i '' '3i\
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"' "$rcfile"
+
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.4/install.sh | bash
 
 . "$rcfile"
 nvm install --lts
