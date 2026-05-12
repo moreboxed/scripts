@@ -1,6 +1,10 @@
 echo "$password" | sudo -S -v
 
-if [ "$OSTYPE" != "Darwin" ]; then
+rcfile="$HOME/.bashrc"
+
+if [[ "$OSTYPE" == "darwin"* ]]; then
+  rcfile="$HOME/.zshrc"
+else
     if ! command -v unzip >/dev/null 2>&1; then
         if command -v apt >/dev/null 2>&1; then
             sudo apt update && sudo apt install -y unzip
@@ -11,3 +15,5 @@ if [ "$OSTYPE" != "Darwin" ]; then
 fi
 
 curl -fsSL https://bun.sh/install | bash
+
+echo 'export PATH="$HOME/.bun/bin:$PATH"' >> "$rcfile"
