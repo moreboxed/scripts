@@ -3,12 +3,8 @@
 <plist version="1.0">
 <dict>
     <key>name</key>
-    <string>Pi</string>
+    <string>Python (UV)</string>
     <key>category</key>
-    <string>Agent</string>
-    <key>deps</key>
-    <array>
-        <string>tool_node.js</string>
-    </array>
+    <string>Tool</string>
 </dict>
 </plist>

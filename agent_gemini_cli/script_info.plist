@@ -2,6 +2,10 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+    <key>name</key>
+    <string>Gemini CLI</string>
+    <key>category</key>
+    <string>Agent</string>
     <key>deps</key>
     <array>
         <string>tool_node.js</string>
